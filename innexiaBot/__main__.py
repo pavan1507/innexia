@@ -74,29 +74,29 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Heya` 🤗 `I am` **INNEXIA** `your group super bot`
+`Heya` 🤗 `I am` **PATRICIA** `your group super bot`
 `I am very fast and  more efficient  I provide awesome  features which a owner will look for  filter ,warn system,note keeping system flood!`
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="❔Hᴇʟᴘ & Cᴏᴍᴍᴀɴᴅꜱ ❔", callback_data="help_back"),
+            text="Fᴜɴᴄᴛɪᴏɴs📚", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="👥 Gʀᴏᴜᴘ", url=f"https://t.me/SiderzChat"),
+        InlineKeyboardButton(text="Sᴜᴩᴩᴏʀᴛ⚠️", url=f"https://t.me/PATRICIA_SUPPORT"),
         InlineKeyboardButton(
-            text="Cʜᴀɴɴᴇʟ 🔔", url=f"https://t.me/SiderzBot"
+            text="Uᴩᴅᴀᴛᴇs🔔", url=f"https://t.me/PATRICIA_UPDATES"
         ),
     ],
     [
-        InlineKeyboardButton(text="📜 Iɴꜰᴏʀᴍᴀᴛɪᴏɴ", callback_data="innexia_"),
+        InlineKeyboardButton(text="Dᴇᴛᴀɪʟs", callback_data="innexia_"),
         InlineKeyboardButton(
-            text="Bᴏᴛ Lɪꜱᴛ 🤖", url=f"https://t.me/SiderzBot/9"
+            text="Gʙᴀɴ-Lᴏɢs⏱️", url=f"https://t.me/PATRICIA_LOGS"
         ),
     ],
     [
-        InlineKeyboardButton(text="💕 Sᴜᴍᴍᴏɴ Mᴇ 💕", url="http://t.me/Innexiabot?startgroup=true"),
+        InlineKeyboardButton(text="💕 Sᴜᴍᴍᴏɴ Mᴇ 💕", url="http://t.me/PATRICIA_ROBOT?startgroup=true"),
     ],
 ]
 
@@ -108,7 +108,7 @@ HELP_STRINGS = """
 
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- @SiderzDonate's 💕"""
+ @PiroXpower 's 💕"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -218,7 +218,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "[👋](https://telegra.ph/file/647cd4b88dad5350ad71d.gif)I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            "[👋](https://telegra.ph/file/53e6bdbc5fc1c1f1edfff.jpg)I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -353,14 +353,14 @@ def innexia_about_callback(update, context):
     query = update.callback_query
     if query.data == "innexia_":
         query.message.edit_text(
-            text=""" **INNEXIA** it's online since 29 March 2021 and it's constantly updated!
+            text=""" **PATRICIA** it's online since 29 March 2021 and it's constantly updated!
             \n**Bot Admins**
             
-            \n• @useIes, bot creator and main developer.
+            \n• @PIROXPOWER, bot creator and main developer.
             \n• The Doctor, server manager and developer.
             \n• Manuel 5, developer.
             \n**Support**
-            \n• [Click here](t.me/BotDevlopers) to consult the updated list of Official Supporters of the bot.
+            \n• [Click here](t.me/PATRICIA_SUPPORT) to consult the updated list of Official Supporters of the bot.
             \n• Thanks to all our **donors** for supporting server and development expenses and all those who have reported bugs or suggested new features.
             \n• We also thank **all the groups** who rely on our Bot for this service, we hope you will always like it: we are constantly working to improve it!""",
             parse_mode=ParseMode.MARKDOWN,
@@ -388,8 +388,8 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..😻 I'm *Innexia*
-                 \nHere is the [🔥Source Code🔥](https://github.com/DarkCybers/innexiaBot) .""",
+            text=""" Hi..😻 I'm *Patricia*
+                 \nHere is the [🔥Source Code🔥](t.me/piroXpower) .""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
