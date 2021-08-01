@@ -90,7 +90,7 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="Dᴇᴛᴀɪʟs", callback_data="innexia_"),
+        InlineKeyboardButton(text="Dᴇᴛᴀɪʟs🗞️", callback_data="innexia_"),
         InlineKeyboardButton(
             text="Gʙᴀɴ-Lᴏɢs⏱️", url=f"https://t.me/PATRICIA_LOGS"
         ),
