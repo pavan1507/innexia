@@ -372,7 +372,7 @@ def innexia_about_callback(update, context):
                     InlineKeyboardButton(text="Help", callback_data="help_back"),
                  ],
                  [
-                    InlineKeyboardButton(text="Credit", callback_data="source_"),
+                    InlineKeyboardButton(text="Credit", url="https://t.me/Patricia_credits"),
                     InlineKeyboardButton(text="Support", url="t.me/patricia_support"),
                  ]
                 ]
