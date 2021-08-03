@@ -390,7 +390,7 @@ def innexia_about_callback(update, context):
 
 @run_async
 def Source_about_callback(update, context):
-    query = update.ca
+    query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
             text=""" Hi..😻 I'm *Patricia*
