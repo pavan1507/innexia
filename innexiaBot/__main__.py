@@ -218,7 +218,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "[👋](https://telegra.ph/file/53e6bdbc5fc1c1f1edfff.jpg)I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -368,7 +368,12 @@ def innexia_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Back", callback_data="innexia_back")
+                    InlineKeyboardButton(text="Back", callback_data="innexia_back"),
+                    InlineKeyboardButton(text="Help", callback_data="help_back"),
+                 ]
+                 [
+                    InlineKeyboardButton(text="Credit", callback_data="source_"),
+                    InlineKeyboardButton(text="Help", callback_data="help_back"),
                  ]
                 ]
             ),
@@ -385,17 +390,28 @@ def innexia_about_callback(update, context):
 
 @run_async
 def Source_about_callback(update, context):
-    query = update.callback_query
+    query = update.ca
     if query.data == "source_":
         query.message.edit_text(
             text=""" Hi..😻 I'm *Patricia*
-                 \nHere is the [🔥Source Code🔥](t.me/piroXpower) .""",
+            \n• Here Is The List For Developers..
+            \n• Owner Of Bot [BLAZE](T.ME/PIROXPOWER)
+            \n• Manuel 5, developers,They Are:-
+            \n• @imLucif3r
+            \n• @DEVILDAD_PRINCE
+            \n• @useIes 
+            \n• @Itz_oxiOp 
+            \n• @its_broken_18
+            \n• Thanks To All Developers Supporters And Dev's,
+            \n• If you Like Our Bot Then You Can Donate Or You Can 
+            \n• Support Us By Giving Ideas. For More Quary Join @PATRICIA_SUPPORT.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="source_back")
+                    InlineKeyboardButton(text="Back", callback_data="source_back"),
+                    InlineKeyboardButton(text="Support", url="t.me/patricia_support"),
                  ]
                 ]
             ),
