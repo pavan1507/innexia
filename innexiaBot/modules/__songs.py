@@ -16,7 +16,7 @@ from youtube_dl import YoutubeDL
 from youtubesearchpython import SearchVideos
 
 import arq
-from DaisyX.function.pluginhelpers import get_text, progress
+from innexia.pyrogramee.pluginshelper import get_text, progress
 from innexiaBot import pbot as  Client
 
 dl_limit = 0
