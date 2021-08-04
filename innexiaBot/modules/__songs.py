@@ -15,7 +15,6 @@ from pyrogram.types import Message
 from youtube_dl import YoutubeDL
 from youtubesearchpython import SearchVideos
 
-import arq
 from innexia.pyrogramee.pluginshelper import get_text, progress
 from innexiaBot import pbot as  Client
 
