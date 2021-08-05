@@ -15,7 +15,9 @@ async def lego(event):
  quew = event.pattern_match.group(1)
  if event.sender_id == OWNER_ID:
      pass
+
 else:
+
     event = await eor(hellevent, "Processing.....")
     fnt = await get_font_file(hellevent.client, "@PATRICIAXFONTS)
     if hellevent.reply_to_msg_id:
