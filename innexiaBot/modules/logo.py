@@ -15,13 +15,13 @@ async def lego(event):
  quew = event.pattern_match.group(1)
  if event.sender_id == OWNER_ID:
      pass
-   else:
+else:
     event = await eor(hellevent, "Processing.....")
     fnt = await get_font_file(hellevent.client, "@PATRICIAXFONTS)
     if hellevent.reply_to_msg_id:
         rply = await hellevent.get_reply_message()
         logo_ = await rply.download_media()
-   else:
+else:
         async for i in bot.iter_messages("@PATRICIAXLOGOS", filter=InputMessagesFilterPhotos):
          PICS_STR.append(i)
         pic = random.choice(PICS_STR)
@@ -33,7 +33,7 @@ async def lego(event):
     elif len(text) >= 9:
         font_size_ = 50
         strik = 5
-    else:
+else:
         font_size_ = 130
         strik = 20
     if not text:
