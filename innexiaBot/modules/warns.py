@@ -3,9 +3,9 @@ import re
 from typing import Optional
 
 import telegram
-from MashaRoBot import TIGERS, WOLVES, dispatcher
-from MashaRoBot.modules.disable import DisableAbleCommandHandler
-from MashaRoBot.modules.helper_funcs.chat_status import (
+from innexiaBot import TIGERS, WOLVES, dispatcher
+from innexiaBot.modules.disable import DisableAbleCommandHandler
+from innexiaBot.modules.helper_funcs.chat_status import (
     bot_admin,
     can_restrict,
     is_user_admin,
