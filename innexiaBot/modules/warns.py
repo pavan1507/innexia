@@ -14,16 +14,16 @@ from innexiaBot.modules.helper_funcs.chat_status import (
     user_admin_no_reply,
     can_delete,
 )
-from MashaRoBot.modules.helper_funcs.extraction import (
+from innexiaBot.modules.helper_funcs.extraction import (
     extract_text,
     extract_user,
     extract_user_and_text,
 )
-from MashaRoBot.modules.helper_funcs.filters import CustomFilters
-from MashaRoBot.modules.helper_funcs.misc import split_message
-from MashaRoBot.modules.helper_funcs.string_handling import split_quotes
-from MashaRoBot.modules.log_channel import loggable
-from MashaRoBot.modules.sql import warns_sql as sql
+from innexiaBot.modules.helper_funcs.filters import CustomFilters
+from innexiaBot.modules.helper_funcs.misc import split_message
+from innexiaBot.modules.helper_funcs.string_handling import split_quotes
+from innexiaBot.modules.log_channel import loggable
+from innexiaBot.modules.sql import warns_sql as sql
 from telegram import (
     CallbackQuery,
     Chat,
@@ -45,7 +45,7 @@ from telegram.ext import (
     run_async,
 )
 from telegram.utils.helpers import mention_html
-from MashaRoBot.modules.sql.approve_sql import is_approved
+from innexiaBot.modules.sql.approve_sql import is_approved
 
 WARN_HANDLER_GROUP = 9
 CURRENT_WARNING_FILTER_STRING = "<b>Current warning filters in this chat:</b>\n"
