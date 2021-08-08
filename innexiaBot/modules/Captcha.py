@@ -73,7 +73,7 @@ async def check_chat_captcha(client, message):
                               text=f"{message.from_user.mention} to chat here please verify that your a human",
                               reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Verify Now", callback_data=f"verify_{chat_id}_{user_id}")]]))
         
-@app.on_message(filters.command(["captcha"]) & ~filters.private)
+@app.on_message(filters.command(["captcha",f"captcha@PATRICIA_ROBOT"]) & ~filters.private)
 async def add_chat(bot, message):
     if Config.API_TOKEN is None:
         await message.reply_text("Please get the apy key from @JV_Community")
@@ -91,7 +91,7 @@ async def add_chat(bot, message):
                                                                         InlineKeyboardButton(text="Emoji", callback_data=f"new_{chat_id}_{user_id}_E")]]))
         
     
-@app.on_message(filters.command(["remove"]) & ~filters.private)
+@app.on_message(filters.command(["remove",f"remove@PATRICIA_ROBOT"]) & ~filters.private)
 async def del_chat(bot, message):
     if Config.API_TOKEN is None:
         await message.reply_text("Please get the apy key from @JV_Community")
