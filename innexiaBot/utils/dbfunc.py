@@ -1,9 +1,13 @@
+import codecs
+import pickle
+
 from innexiaBot.mongo import db
 from typing import Dict, List, Union
 
 
 coupledb = db.couple
-
+captchadb = db.captcha
+captcha_cachedb = db.captcha_cache
 
 # Couple Chooser
 
