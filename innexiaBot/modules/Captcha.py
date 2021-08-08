@@ -1,6 +1,6 @@
 from proper.dbconfo import Config
-from innexiaBot import TOKEN as BOT_TOKEN
-from innexiaBot import API_ID,API_HASH,DEV_USERS
+
+from innexiaBot import API_ID,API_HASH,DEV_USERS,TOKEN
 from requests import get
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, ChatPermissions, CallbackQuery
@@ -11,7 +11,7 @@ from proper.db import manage_db
 from pyrogram.errors import UserNotParticipant
 from proper.markup import MakeCaptchaMarkup
 # Prepare bot
-app = Client(Config.SESSION_NAME, API_ID=Config.API_ID, API_HASH=Config.API_HASH, BOT_TOKEN)
+app = Client(Config.SESSION_NAME, API_ID=Config.API_ID, API_HASH=Config.API_HASH, TOKEN=Config.TOKEN)
 # Local database for saving user info
 LocalDB = {}
 
