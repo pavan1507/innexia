@@ -6,6 +6,6 @@ class Config(object):
     # Leave this defualt
     SESSION_NAME = os.environ.get("SESSION_NAME", "JV_CaptchaBot")
     # get it from https://cloud.mongodb.com 
-    API_TOKEN = os.environ.get("API_TOKEN", None)
+    API_TOKEN = os.environ.get("API_TOKEN", "dontsellme_iamfreeapi")
     # Sudo users(goto @JVToolsBot and send /id to get your id)
    
