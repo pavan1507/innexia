@@ -16,7 +16,7 @@ from innexiaBot import SUDOERS, WELCOME_DELAY_KICK_SEC, app
 from innexiaBot.core.decorators.errors import capture_err
 from innexiaBot.core.decorators.permissions import adminsOnly
 from innexiaBot.core.keyboard import ikb
-from innexiaBot.utils.dbfunctions import (captcha_off, captcha_on,
+from innexiaBot.utils.dbfunc import (captcha_off, captcha_on,
                                    del_welcome, get_captcha_cache,
                                    get_welcome, is_captcha_on,
                                    is_gbanned_user, set_welcome,
