@@ -1,4 +1,6 @@
-from innexiaBot import Config
+from proper.dbconfo import Config
+from innexiaBot import TOKEN as BOT_TOKEN
+from innexiaBot import API_ID,API_HASH,DEV_USERS
 from requests import get
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, ChatPermissions, CallbackQuery
@@ -71,7 +73,7 @@ async def check_chat_captcha(client, message):
                               text=f"{message.from_user.mention} to chat here please verify that your a human",
                               reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Verify Now", callback_data=f"verify_{chat_id}_{user_id}")]]))
         
-@app.on_message(filters.command(["captcha",f"captcha@{BOT_UNAME}"]) & ~filters.private)
+@app.on_message(filters.command(["captcha"]) & ~filters.private)
 async def add_chat(bot, message):
     if Config.API_TOKEN is None:
         await message.reply_text("Please get the apy key from @JV_Community")
@@ -88,17 +90,8 @@ async def add_chat(bot, message):
                                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(text="Number", callback_data=f"new_{chat_id}_{user_id}_N"),
                                                                         InlineKeyboardButton(text="Emoji", callback_data=f"new_{chat_id}_{user_id}_E")]]))
         
-@app.on_message(filters.command(["help",f"help@{BOT_UNAME}"]))
-async def start_chat(bot, message):
-    await message.reply_text(text="/captcha - turn on captcha : There are two types of captcha\n/remove - turn off captcha\n\nfor more help ask in my support group",
-                             reply_markup=ch_markup)
     
-@app.on_message(filters.command(["start",f"start@{BOT_UNAME}"]))
-async def help_chat(bot, message):
-    await message.reply_text(text="I can help you to protect your group from bots using captcha.\n\nCheck /help to know more.",
-                             reply_markup=ch_markup)
-    
-@app.on_message(filters.command(["remove",f"remove@{BOT_UNAME}"]) & ~filters.private)
+@app.on_message(filters.command(["remove"]) & ~filters.private)
 async def del_chat(bot, message):
     if Config.API_TOKEN is None:
         await message.reply_text("Please get the apy key from @JV_Community")
@@ -237,5 +230,3 @@ async def cb_handler(bot, query):
     elif cb_data.startswith("wrong_"):
         await query.answer("Dont click on same button again", show_alert=True)
         
-if __name__ == "__main__":
-    app.run()
