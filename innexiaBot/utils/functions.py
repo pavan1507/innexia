@@ -16,11 +16,11 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 from pyrogram.types import Message
 from wget import download
 
-from wbb import aiohttpsession as aiosession
-from wbb import arq
-from wbb.utils import aiodownloader
-from wbb.utils.dbfunctions import start_restart_stage
-from wbb.utils.http import get
+from innexiaBot import aiohttpsession as aiosession
+from innexiaBot import arq
+from innexiaBot.utils import aiodownloader
+from innexiaBot.utils.dbfunc import start_restart_stage
+from innexiaBot.utils.http import get
 
 """
 Just import 'downloader' anywhere and do downloader.download() to
