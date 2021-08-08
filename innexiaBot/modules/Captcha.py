@@ -11,7 +11,7 @@ from proper.db import manage_db
 from pyrogram.errors import UserNotParticipant
 from proper.markup import MakeCaptchaMarkup
 # Prepare bot
-app = Client(Config.SESSION_NAME, api_id=Config.APP_ID, api_hash=Config.API_HASH, bot_token=Config.BOT_TOKEN)
+app = Client(Config.SESSION_NAME, api_id=Config.API_ID, api_hash=Config.API_HASH, bot_token=Config.BOT_TOKEN)
 # Local database for saving user info
 LocalDB = {}
 
