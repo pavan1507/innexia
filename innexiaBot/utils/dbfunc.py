@@ -36,3 +36,47 @@ async def save_couple(chat_id: int, date: str, couple: dict):
         },
         upsert=True
     )
+
+#Captcha
+
+async def is_captcha_on(chat_id: int) -> bool:
+    chat = await captchadb.find_one({"chat_id": chat_id})
+    if not chat:
+        return True
+    return False
+
+
+async def captcha_on(chat_id: int):
+    is_captcha = await is_captcha_on(chat_id)
+    if is_captcha:
+        return
+    return await captchadb.delete_one({"chat_id": chat_id})
+
+
+async def captcha_off(chat_id: int):
+    is_captcha = await is_captcha_on(chat_id)
+    if not is_captcha:
+        return
+    return await captchadb.insert_one({"chat_id": chat_id})
+
+""" CAPTCHA CACHE SYSTEM """
+
+
+async def update_captcha_cache(captcha_dict):
+    pickle = obj_to_str(captcha_dict)
+    await captcha_cachedb.delete_one({"captcha": "cache"})
+    if not pickle:
+        return
+    await captcha_cachedb.update_one(
+        {"captcha": "cache"},
+        {"$set": {"pickled": pickle}},
+        upsert=True,
+    )
+
+
+async def get_captcha_cache():
+    cache = await captcha_cachedb.find_one({"captcha": "cache"})
+    if not cache:
+        return []
+    return str_to_obj(cache["pickled"])
+
