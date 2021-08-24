@@ -84,9 +84,9 @@ buttons = [
             text="Fᴜɴᴄᴛɪᴏɴs📚", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="Sᴜᴩᴩᴏʀᴛ⚠️", url=f"https://t.me/PATRICIA_SUPPORT"),
+        InlineKeyboardButton(text="Sᴜᴩᴩᴏʀᴛ⚠️", url=f"https://t.me/TGBOTSXD"),
         InlineKeyboardButton(
-            text="Uᴩᴅᴀᴛᴇs🔔", url=f"https://t.me/PATRICIA_UPDATES"
+            text="Uᴩᴅᴀᴛᴇs🔔", url=f"https://t.me/TGBOTZXD"
         ),
     ],
     [
@@ -411,7 +411,7 @@ def Source_about_callback(update, context):
                 [
                  [
                     InlineKeyboardButton(text="Back", callback_data="source_back"),
-                    InlineKeyboardButton(text="Support", url="t.me/patricia_support"),
+                    InlineKeyboardButton(text="Support", url="t.me/tgbotsXD"),
                  ]
                 ]
             ),
