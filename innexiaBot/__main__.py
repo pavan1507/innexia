@@ -74,29 +74,29 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Heya` 🤗 `I am` **PATRICIA** `your group super bot`
+`Heya` 🤗 `I am` **Phoenix** `One of the best group managing bot`
 `I am very fast and  more efficient  I provide awesome  features which a owner will look for  filter ,warn system,note keeping system flood!`
 """
 
 buttons = [
     [
         InlineKeyboardButton(
-            text="Fᴜɴᴄᴛɪᴏɴs📚", callback_data="help_back"),
+            text="Fᴜɴᴄᴛɪᴏɴs", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="Sᴜᴩᴩᴏʀᴛ⚠️", url=f"https://t.me/TGBOTSXD"),
+        InlineKeyboardButton(text="Sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/CFC_BOT_support"),
         InlineKeyboardButton(
-            text="Uᴩᴅᴀᴛᴇs🔔", url=f"https://t.me/TGBOTZXD"
+            text="Uᴩᴅᴀᴛᴇs", url=f"https://t.me/phoenix_empire"
         ),
     ],
     [
-        InlineKeyboardButton(text="Dᴇᴛᴀɪʟs🗞️", callback_data="innexia_"),
+        InlineKeyboardButton(text="Dᴇᴛᴀɪʟs", callback_data="innexia_"),
         InlineKeyboardButton(
-            text="Gʙᴀɴ-Lᴏɢs⏱️", url=f"https://t.me/PATRICIA_LOGS"
+            text="ᴏᴡɴᴇʀ", url=f"https://t.me/heyaaman"
         ),
     ],
     [
-        InlineKeyboardButton(text="💕 Sᴜᴍᴍᴏɴ Mᴇ 💕", url="http://t.me/PATRICIA_ROBOT?startgroup=true"),
+        InlineKeyboardButton(text=" Sᴜᴍᴍᴏɴ Mᴇ ", url="http://t.me/PhoenixWarmedbot?startgroup=true"),
     ],
 ]
 
@@ -353,14 +353,14 @@ def innexia_about_callback(update, context):
     query = update.callback_query
     if query.data == "innexia_":
         query.message.edit_text(
-            text=""" **PATRICIA** it's online since 29 March 2021 and it's constantly updated!
+            text=""" **Phoenix** it's online since 9 September 2021 and it's constantly updated!
             \n**Bot Admins**
             
-            \n• @PIROXPOWER, bot creator and main developer.
+            \n• @PhoenixWarmedbot, bot creator and main developer.
             \n• The Doctor, server manager and developer.
             \n• Manuel 5, developer.
             \n**Support**
-            \n• [Click here](t.me/PATRICIA_SUPPORT) to consult the updated list of Official Supporters of the bot.
+            \n• [Click here](t.me/CFC_BOT_support) to consult the updated list of Official Supporters of the bot.
             \n• Thanks to all our **donors** for supporting server and development expenses and all those who have reported bugs or suggested new features.
             \n• We also thank **all the groups** who rely on our Bot for this service, we hope you will always like it: we are constantly working to improve it!""",
             parse_mode=ParseMode.MARKDOWN,
