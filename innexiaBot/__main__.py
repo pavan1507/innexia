@@ -74,7 +74,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Heya` 🤗 `I am` **Phoenix** `One of the best group managing bot`
+`Heya` 🤗 `I am` **Phoenix** (https://telegra.ph/file/05d4b03ae5cca66a3458f.jpg) `One of the best group managing bot`
 `I am very fast and  more efficient  I provide awesome  features which a owner will look for  filter ,warn system,note keeping system flood!`
 """
 
