@@ -372,8 +372,8 @@ def innexia_about_callback(update, context):
                     InlineKeyboardButton(text="Help", callback_data="help_back"),
                  ],
                  [
-                    InlineKeyboardButton(text="Credit", url="https://t.me/Patricia_credits"),
-                    InlineKeyboardButton(text="Support", url="t.me/patricia_support"),
+                    InlineKeyboardButton(text="Spam Group", url="https://t.me/PHOENIXPIRATES"),
+                    InlineKeyboardButton(text="Support", url="t.me/CFC_BOT_support"),
                  ]
                 ]
             ),
@@ -393,25 +393,23 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..😻 I'm *Patricia*
+            text=""" Hi..😻 I'm *Phoenix*
             \n• Here Is The List For Developers..
-            \n• Owner Of Bot [BLAZE](T.ME/PIROXPOWER)
-            \n• Manuel 5, developers,They Are:-
-            \n• @imLucif3r
-            \n• @DEVILDAD_PRINCE
-            \n• @useIes 
-            \n• @Itz_oxiOp 
-            \n• @its_broken_18
+            \n• Owner Of Bot [heyaaman](T.ME/heyaaman)
+            \n• Manuel 3, developers,They Are:-
+            \n• @PhoenixWarmed
+            \n• @BazigarYT
+            \n• @BazigarYT 
             \n• Thanks To All Developers Supporters And Dev's,
             \n• If you Like Our Bot Then You Can Donate Or You Can 
-            \n• Support Us By Giving Ideas. For More Quary Join @PATRICIA_SUPPORT.""",
+            \n• Support Us By Giving Ideas. For More Quary Join @CFC_BOT_support.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
                     InlineKeyboardButton(text="Back", callback_data="source_back"),
-                    InlineKeyboardButton(text="Support", url="t.me/tgbotsXD"),
+                    InlineKeyboardButton(text="Support", url="t.me/CFC_BOT_support"),
                  ]
                 ]
             ),
