@@ -74,7 +74,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Heya` 🤗 `I am` **Phoenix** (https://telegra.ph/file/05d4b03ae5cca66a3458f.jpg) `One of the best group managing bot`
+`Heya` 🤗 `I am` **Panuu** (https://telegra.ph/file/6b93ac5767c28ad29a130.jpg) `One of the best group managing bot`
 `I am very fast and  more efficient  I provide awesome  features which a owner will look for  filter ,warn system,note keeping system flood!`
 """
 
@@ -84,19 +84,19 @@ buttons = [
             text="Fᴜɴᴄᴛɪᴏɴs", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="Sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/CFC_BOT_support"),
+        InlineKeyboardButton(text="Sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/panuutransfer"),
         InlineKeyboardButton(
-            text="Uᴩᴅᴀᴛᴇs", url=f"https://t.me/phoenix_empire"
+            text="Uᴩᴅᴀᴛᴇs", url=f"https://t.me/panuutransfer"
         ),
     ],
     [
         InlineKeyboardButton(text="Dᴇᴛᴀɪʟs", callback_data="innexia_"),
         InlineKeyboardButton(
-            text="ᴏᴡɴᴇʀ", url=f"https://t.me/heyaaman"
+            text="ᴏᴡɴᴇʀ", url=f"https://t.me/creatorpavanx"
         ),
     ],
     [
-        InlineKeyboardButton(text=" Sᴜᴍᴍᴏɴ Mᴇ ", url="http://t.me/PhoenixWarmedbot?startgroup=true"),
+        InlineKeyboardButton(text=" Sᴜᴍᴍᴏɴ Mᴇ ", url="http://t.me/panuuXbot?startgroup=true"),
     ],
 ]
 
@@ -108,7 +108,7 @@ HELP_STRINGS = """
 
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- @PiroXpower 's 💕"""
+ @creatorpavanx 's 💕"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -353,14 +353,14 @@ def innexia_about_callback(update, context):
     query = update.callback_query
     if query.data == "innexia_":
         query.message.edit_text(
-            text=""" **Phoenix** it's online since 9 September 2021 and it's constantly updated!
+            text=""" **Panuu** it's online since 9 September 2021 and it's constantly updated!
             \n**Bot Admins**
             
-            \n• @PhoenixWarmedbot, bot creator and main developer.
+            \n• @pannuXbot, bot creator and main developer.
             \n• The Doctor, server manager and developer.
             \n• Manuel 5, developer.
             \n**Support**
-            \n• [Click here](t.me/CFC_BOT_support) to consult the updated list of Official Supporters of the bot.
+            \n• [Click here](t.me/panuutransfer) to consult the updated list of Official Supporters of the bot.
             \n• Thanks to all our **donors** for supporting server and development expenses and all those who have reported bugs or suggested new features.
             \n• We also thank **all the groups** who rely on our Bot for this service, we hope you will always like it: we are constantly working to improve it!""",
             parse_mode=ParseMode.MARKDOWN,
@@ -372,8 +372,8 @@ def innexia_about_callback(update, context):
                     InlineKeyboardButton(text="Help", callback_data="help_back"),
                  ],
                  [
-                    InlineKeyboardButton(text="Spam Group", url="https://t.me/PHOENIXPIRATES"),
-                    InlineKeyboardButton(text="Support", url="t.me/CFC_BOT_support"),
+                    InlineKeyboardButton(text="Spam Group", url="https://t.me/panuutransfer"),
+                    InlineKeyboardButton(text="Support", url="t.me/panuutransfer"),
                  ]
                 ]
             ),
@@ -393,23 +393,23 @@ def Source_about_callback(update, context):
     query = update.callback_query
     if query.data == "source_":
         query.message.edit_text(
-            text=""" Hi..😻 I'm *Phoenix*
+            text=""" Hi..🙋 I'm *Panuu*
             \n• Here Is The List For Developers..
-            \n• Owner Of Bot [heyaaman](T.ME/heyaaman)
+            \n• Owner Of Bot [heyaaman](T.ME/creatorpavanx)
             \n• Manuel 3, developers,They Are:-
-            \n• @PhoenixWarmed
-            \n• @BazigarYT
-            \n• @BazigarYT 
+            \n• @panuutransfer
+            \n• @panuutransfer
+            \n• @panuutransfer 
             \n• Thanks To All Developers Supporters And Dev's,
             \n• If you Like Our Bot Then You Can Donate Or You Can 
-            \n• Support Us By Giving Ideas. For More Quary Join @CFC_BOT_support.""",
+            \n• Support Us By Giving Ideas. For More Quary Join @panuutransfer.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
                     InlineKeyboardButton(text="Back", callback_data="source_back"),
-                    InlineKeyboardButton(text="Support", url="t.me/CFC_BOT_support"),
+                    InlineKeyboardButton(text="Support", url="t.me/panuutransfer"),
                  ]
                 ]
             ),
@@ -650,7 +650,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 1947924017 and DONATION_LINK:
+        if OWNER_ID != 1232080004 and DONATION_LINK:
             update.effective_message.reply_text(
                 "You can also donate to the person currently running me "
                 "[here]({})".format(DONATION_LINK),
@@ -698,7 +698,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "`Yes I'm Fine` 😹")
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "`Yes I'm Fine` 🙋")
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!"
